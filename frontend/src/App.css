@@ -1,0 +1,51 @@
+/* Light Mode (Default) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333;
+  --navbar-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --btn-bg: #007bff;
+  --btn-hover-bg: #0056b3;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --navbar-bg: #333;
+  --shadow-color: rgba(255, 255, 255, 0.1);
+  --btn-bg: #ffcc00;
+  --btn-hover-bg: #ffaa00;
+}
+
+/* Apply theme globally */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar should also change */
+.navbar {
+  background-color: var(--navbar-bg);
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+/* Links should follow text color */
+.nav-links a {
+  color: var(--text-color);
+}
+
+/* Buttons should also follow dark mode */
+button {
+  /* background-color: var(--btn-bg); */
+  color: var(--text-color);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--btn-hover-bg);
+}
